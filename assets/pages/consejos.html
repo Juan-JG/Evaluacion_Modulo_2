@@ -3,21 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Ciber-educa: Educación cibernética para todos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Cyberdyne: Consejos de Seguridad en Línea</title>
   </head>
   <body>
     <!-- Inicio - Header -->
@@ -25,7 +28,7 @@
       <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="../../index.html"
-            ><img class="logo" src="../img/logo.png" alt=""
+            ><img class="logo" src="../img/logo.png" alt="Cyberdyne Logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -41,13 +44,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../../index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="amenazas.html">Amenazas comunes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="consejos.html">Consejos</a>
+                <a class="nav-link active" href="consejos.html">Consejos</a>
               </li>
             </ul>
             <form class="d-flex busqueda" role="search">
@@ -64,10 +72,106 @@
       </nav>
     </header>
     <!-- Fin - Header -->
+
+    <!-- Inicio - Main -->
+    <main class="main-consejos">
+      <div class="container my-5">
+        <h1 class="text-center mb-4">Consejos para Protegerte en Línea</h1>
+        <ul class="list-group mb-5">
+          <li class="list-group-item">Usa contraseñas seguras y únicas para cada cuenta.</li>
+          <li class="list-group-item">Activa la autenticación en dos pasos siempre que sea posible.</li>
+          <li class="list-group-item">Mantén tus dispositivos y software actualizados.</li>
+          <li class="list-group-item">No compartas información personal en redes sociales públicamente.</li>
+          <li class="list-group-item">Evita conectarte a redes Wi-Fi públicas sin una VPN.</li>
+          <li class="list-group-item">Realiza copias de seguridad de tu información periódicamente.</li>
+        </ul>
+
+        <div class="text-center mb-4">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal">
+            Realizar Test de Seguridad
+          </button>
+        </div>
+
+        <h2 class="text-center mb-4">Solicita más información</h2>
+        <form id="contactForm" class="mx-auto" style="max-width: 500px;">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="tuemail@dominio.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu consulta aquí" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Enviar</button>
+          <div id="formFeedback" class="mt-3 text-center"></div>
+        </form>
+      </div>
+
+      <!-- Modal Test de Seguridad -->
+      <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="testModalLabel">Test de Seguridad en Línea</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <form id="testForm">
+                <div class="mb-3">
+                  <label class="form-label">¿Qué debes hacer para proteger tus cuentas?</label>
+                  <select class="form-select" id="question1">
+                    <option value="">Selecciona una opción</option>
+                    <option value="a">Usar la misma contraseña en todos lados</option>
+                    <option value="b">Usar contraseñas fuertes y únicas</option>
+                    <option value="c">No usar contraseñas</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">¿Qué es recomendable en redes Wi-Fi públicas?</label>
+                  <select class="form-select" id="question2">
+                    <option value="">Selecciona una opción</option>
+                    <option value="a">Conectarse sin preocuparse</option>
+                    <option value="b">Usar VPN y evitar transacciones importantes</option>
+                    <option value="c">Compartir datos personales</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar Respuestas</button>
+                <div id="testFeedback" class="mt-3 text-center"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin Modal -->
+    </main>
+    <!-- Fin - Main -->
+
+    <!-- Inicio - Footer -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container text-center">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="logo py-4" src="../img/logo.png" alt="Cyberdyne Logo" />
+        </a>
+        <p class="mb-2">Educando a la comunidad para construir un mundo digital más seguro.</p>
+        <div class="d-flex justify-content-center gap-3 mb-2">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <p class="mb-0 small">&copy; 2025 CYBERDYNE. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <!-- Fin - Footer -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+/******** Generales ********/
 * {
     font-family: "Noto Sans", sans-serif;
 }
@@ -9,12 +10,13 @@ a:hover {
     color: #757575 !important;
 }
 p {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
-/* Reducir tamaño del botón hamburguesa */
+/***** Header *****/
+/*** Navbar ***/
 .navbar-toggler {
-    padding: 0.15rem 0.4rem;  /* menos padding */
-    font-size: 0.9rem;        /* texto e ícono más pequeño */
+    padding: 0.15rem 0.4rem;
+    font-size: 0.9rem;
 }
 .navbar {
     background-color: black;
@@ -23,12 +25,16 @@ p {
     width: 1rem;
     height: 1rem;
 }
-/* Reducir tamaño de textos y padding en navbar form */
+.logo {
+    width: 64px;
+    height: auto;
+}
+/*** Búsqueda ***/
 .busqueda .form-control,
 .busqueda .btn {
     font-size: 16px !important;
     padding: 0.2rem 0.4rem !important;
-    height: auto !important; /* evita alturas fijas */
+    height: auto !important;
     border-radius: 0.1rem;
 }
 .busqueda .btn {
@@ -38,28 +44,21 @@ p {
     background-color: #3b3b3b;
     border-color: #3b3b3b;
 }
-/* Cambiar focus de barra de búsqueda a gris suave */
 .busqueda .form-control:focus {
     border-color: #cccccc !important; /* gris claro */
     box-shadow: 0 0 0 0.1rem rgba(200, 200, 200, 0.4) !important; /* resplandor gris suave */
 }
-.logo {
-    width: 64px;
-    height: auto;
-}
-
-
+/******** Home ********/
+/***** Carrusel Hero *****/
 .carousel-inner {
     height: auto;
     max-height: 80vh;
 }
-
 .carousel-inner img {
     height: auto;
     object-fit: contain;
 }
-
-
+/***** Somos *****/
 .contenedor-somos {
     background-color: black;
     color: white;
@@ -67,4 +66,189 @@ p {
 .contenedor-texto {
     width: auto;
     max-width: 80%;
+}
+.contenedor-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/******** Amenazas ********/
+/***** Galeria de imágenes *****/
+.main-amenazas {
+background-color: #1d1d1d;
+}
+.contenedor-amenazas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 3rem;
+}
+.contenedor-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+     justify-content: center;
+     gap: 30px;
+     padding: 50px 0;
+}
+.contenedor-imagen {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+.imagen {
+  width: 100px;
+  height: auto;
+  max-height: 360px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.imagen:hover {
+  transform: scale(1.05);
+}
+/***** Modal *****/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-contenido {
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 0.4s ease-out;
+  gap: 5px;
+  padding: 1rem;
+}
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+gap: 10px;
+padding: 0 !important;
+margin: 0 !important;
+}
+.modal-info h3 {
+    font-size: 16px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.modal-info p {
+    font-size: 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+#modal-img {
+  width: 80%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;     
+  align-items: center;      
+  justify-content: center;   
+  width: 28px;               
+  height: 28px;
+  line-height: 1;            
+  padding: 0;
+  margin: 0;
+}
+.modal-prev, .modal-sig {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+.modal-prev:hover, .modal-sig:hover {
+  color: #000;
+}
+.modal-btn-link {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px !important; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.modal-btn-link:hover {
+  background-color: #333; /* Slightly grey when hovering */
+}
+/***** Animación Modal *****/
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/***** Acordeón *****/
+.contenedor-acordeon {
+    padding: 2rem 0;
+}
+.contenedor-acordeon p,h2 {
+    color: white;
+}
+.accordion-button {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: #6c757d;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+  color: #212529;
+}
+.accordion-body {
+  font-size: 0.95rem;
+  color: #444;
+}
+/******** Consejos ********/
+.main-consejos {
+  padding-top: 50px;
+}
+
+.list-group-item {
+  font-size: 1rem;
+}
+
+#formFeedback, #testFeedback {
+  font-weight: bold;
+}
+
+.btn-primary, .btn-success {
+  border-radius: 8px;
 }
