@@ -68,7 +68,6 @@ Este proyecto tiene como fin:
 
     Desarrollar habilidades en optimización visual y diseño responsivo.
 
-📸 Preview
 
 🤝 Créditos
 
@@ -86,7 +85,7 @@ Assets utilizados:
 
 1️⃣ Clona el repositorio:
 
-git clone https://github.com/tuusuario/cyberdyne.git
+git clone https://github.com/Juan-JG/Evaluacion_Modulo_2.git
 
 2️⃣ Abre index.html en tu navegador.
 
