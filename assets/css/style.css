@@ -8,13 +8,16 @@ a {
 a:hover {
     color: #757575 !important;
 }
+p {
+    font-size: 14px !important;
+}
 /* Reducir tamaño del botón hamburguesa */
 .navbar-toggler {
     padding: 0.15rem 0.4rem;  /* menos padding */
     font-size: 0.9rem;        /* texto e ícono más pequeño */
 }
 .navbar {
-    background-color: #3b3b3b;
+    background-color: black;
 }
 .navbar-toggler-icon {
     width: 1rem;
@@ -26,12 +29,14 @@ a:hover {
     font-size: 12px !important;
     padding: 0.2rem 0.4rem !important;
     height: auto !important; /* evita alturas fijas */
+    border-radius: 0.1rem;
 }
 .busqueda .btn {
-    background-color: #0cb3c7;
+    background-color: #757575 ;
 }
 .busqueda .btn:hover {
     background-color: #3b3b3b;
+    border-color: #3b3b3b;
 }
 /* Cambiar focus de barra de búsqueda a gris suave */
 .busqueda .form-control:focus {
@@ -39,6 +44,27 @@ a:hover {
     box-shadow: 0 0 0 0.1rem rgba(200, 200, 200, 0.4) !important; /* resplandor gris suave */
 }
 .logo {
-    width: 200px;
+    width: 64px;
     height: auto;
+}
+
+
+.carousel-inner {
+    height: auto;
+    max-height: 80vh;
+}
+
+.carousel-inner img {
+    height: auto;
+    object-fit: contain;
+}
+
+
+.contenedor-somos {
+    background-color: black;
+    color: white;
+}
+.contenedor-texto {
+    width: auto;
+    max-width: 80%;
 }
