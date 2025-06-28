@@ -1,0 +1,44 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+}
+a {
+    font-size: 12px !important;
+    color: white !important;
+}
+a:hover {
+    color: #757575 !important;
+}
+/* Reducir tamaño del botón hamburguesa */
+.navbar-toggler {
+    padding: 0.15rem 0.4rem;  /* menos padding */
+    font-size: 0.9rem;        /* texto e ícono más pequeño */
+}
+.navbar {
+    background-color: #3b3b3b;
+}
+.navbar-toggler-icon {
+    width: 1rem;
+    height: 1rem;
+}
+/* Reducir tamaño de textos y padding en navbar form */
+.busqueda .form-control,
+.busqueda .btn {
+    font-size: 12px !important;
+    padding: 0.2rem 0.4rem !important;
+    height: auto !important; /* evita alturas fijas */
+}
+.busqueda .btn {
+    background-color: #0cb3c7;
+}
+.busqueda .btn:hover {
+    background-color: #3b3b3b;
+}
+/* Cambiar focus de barra de búsqueda a gris suave */
+.busqueda .form-control:focus {
+    border-color: #cccccc !important; /* gris claro */
+    box-shadow: 0 0 0 0.1rem rgba(200, 200, 200, 0.4) !important; /* resplandor gris suave */
+}
+.logo {
+    width: 200px;
+    height: auto;
+}
