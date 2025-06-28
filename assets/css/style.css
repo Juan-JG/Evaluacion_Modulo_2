@@ -2,14 +2,14 @@
     font-family: "Noto Sans", sans-serif;
 }
 a {
-    font-size: 12px !important;
+    font-size: 16px !important;
     color: white !important;
 }
 a:hover {
     color: #757575 !important;
 }
 p {
-    font-size: 14px !important;
+    font-size: 16px !important;
 }
 /* Reducir tamaño del botón hamburguesa */
 .navbar-toggler {
@@ -26,7 +26,7 @@ p {
 /* Reducir tamaño de textos y padding en navbar form */
 .busqueda .form-control,
 .busqueda .btn {
-    font-size: 12px !important;
+    font-size: 16px !important;
     padding: 0.2rem 0.4rem !important;
     height: auto !important; /* evita alturas fijas */
     border-radius: 0.1rem;
