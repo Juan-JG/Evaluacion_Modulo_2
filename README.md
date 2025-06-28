@@ -72,7 +72,7 @@ Este proyecto tiene como fin:
 
 🤝 Créditos
 
-Desarrollado por [Tu Nombre] como práctica final del módulo Front-End.
+Desarrollado por Juan Jaña González como práctica final del módulo Front-End.
 
 Assets utilizados:
 
