@@ -1,3 +1,4 @@
+/* Nota: No se aplica normalize o reset directamente en CSS, ya que se adjunta referencia en head*/
 /******** Generales ********/
 * {
     font-family: "Noto Sans", sans-serif;
@@ -45,8 +46,8 @@ p {
     border-color: #3b3b3b;
 }
 .busqueda .form-control:focus {
-    border-color: #cccccc !important; /* gris claro */
-    box-shadow: 0 0 0 0.1rem rgba(200, 200, 200, 0.4) !important; /* resplandor gris suave */
+    border-color: #cccccc !important;
+    box-shadow: 0 0 0 0.1rem rgba(200, 200, 200, 0.4) !important;
 }
 /******** Home ********/
 /***** Carrusel Hero *****/
@@ -205,7 +206,7 @@ margin: 0 !important;
   transition: background-color 0.3s, transform 0.2s;
 }
 .modal-btn-link:hover {
-  background-color: #333; /* Slightly grey when hovering */
+  background-color: #333;
 }
 /***** Animación Modal *****/
 @keyframes slideIn {
@@ -262,5 +263,5 @@ margin: 0 !important;
   transition: background-color 0.3s, transform 0.2s;
 }
 .btn-black:hover {
-  background-color: #333; /* Slightly grey when hovering */
+  background-color: #333;
 }

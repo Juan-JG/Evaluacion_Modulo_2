@@ -8,7 +8,7 @@ if (carouselElement) {
     pause: false
   });
 }
-// Arreglo de temas de ciberseguridad
+// Arreglo de temas de ciberseguridad - Se utiliza base de Tarea 4
   const temas = [
   {
     id: "phishing",
