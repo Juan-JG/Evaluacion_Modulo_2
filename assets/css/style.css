@@ -238,17 +238,29 @@ margin: 0 !important;
 }
 /******** Consejos ********/
 .main-consejos {
-  padding-top: 50px;
+  padding-top: 2rem;
+  margin-top: 0;
+  background-color: #1d1d1d;
+  color: white;
 }
-
 .list-group-item {
   font-size: 1rem;
 }
-
 #formFeedback, #testFeedback {
   font-weight: bold;
 }
-
 .btn-primary, .btn-success {
   border-radius: 8px;
+}
+.btn-black {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px !important; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn-black:hover {
+  background-color: #333; /* Slightly grey when hovering */
 }
